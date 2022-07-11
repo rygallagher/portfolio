@@ -1,0 +1,21 @@
+<mat-toolbar class="navbar">
+    <div class="spacer">
+        <button mat-icon-button (click)="goHome()">
+            <mat-icon>home</mat-icon>
+        </button>
+
+        <div class="right">
+            <a mat-stroked-button target="_blank" href="https://ry-gallagher-portfolio.s3.amazonaws.com/Ry+Gallagher+Resume.pdf">
+                <mat-icon>picture_as_pdf</mat-icon>
+                &nbsp;Resume
+            </a>
+            
+            <a mat-stroked-button target="_blank" routerLink="/contact-me">
+                <mat-icon>email</mat-icon>
+                &nbsp;Contact
+            </a>
+        </div>
+    </div>
+</mat-toolbar>
+
+<router-outlet class="router-outlet-container"></router-outlet>

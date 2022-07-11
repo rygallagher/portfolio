@@ -1,0 +1,24 @@
+.container {
+    display: grid; 
+    grid-template-columns: 25% 50% 25%;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."; 
+}
+
+.main {
+    padding: 0 10px;
+}
+
+.greeting {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 50px;
+    font-size: x-large;
+}
+
+.divider {
+    margin: 40px 0;
+}

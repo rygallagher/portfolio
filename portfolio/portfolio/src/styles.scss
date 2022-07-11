@@ -1,0 +1,51 @@
+@use '~@angular/material' as mat;
+
+@import './app/styles/blue.scss';
+@import './app/styles/blush.scss';
+
+@include mat.core();
+
+$porfolio-primary: mat.define-palette($blue, 500, 300, 700);
+$porfolio-accent: mat.define-palette($blush, 500, 300, 700);
+$porfolio-warn: mat.define-palette(mat.$red-palette);
+
+$porfolio-theme: mat.define-dark-theme((
+  color: (
+    primary: $porfolio-primary,
+    accent: $porfolio-accent,
+    warn: $porfolio-warn,
+  )
+));
+
+@include mat.all-component-themes($porfolio-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
